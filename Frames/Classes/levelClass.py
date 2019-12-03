@@ -1,3 +1,4 @@
+#Hold the experince, level, and proficency bonus that corresponds to that level
 class Level:
 	def __init__(self,experience=0,level = 0, prof_bonus=0):
 		self.level = level 

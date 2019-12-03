@@ -21,7 +21,7 @@ class Charactersheet:
 		self.profbonus = self.level.getbonus()
 
 
-
+	#Calculates the Characters level based on the total experiece the player has
 	def cal_level(self, xp):
 		level = open('..\\resources\\levels.csv','r')
 		level_reader = csv.reader(level,delimiter=',')
@@ -53,8 +53,10 @@ class Charactersheet:
 
 	def getlevel(self):
 		return self.level.getlevel()
+
 	def getprofbon(self):
 		return self.profbonus
+
 
 
 character = Charactersheet()
