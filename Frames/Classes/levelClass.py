@@ -9,5 +9,5 @@ class Level:
 	def getbonus(self):
 		return int(self.prof_bonus)
 	def getxp(self):
-		int(self.exp)
+		return int(self.exp)
 	
