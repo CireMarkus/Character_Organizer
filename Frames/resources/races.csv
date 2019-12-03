@@ -1,0 +1,16 @@
+RaceName,Subrace,Size,Speed,Language,Str,Dex,Con,Int,Wis,Cha,DV
+Dragonborn,non,M,30,Draconic,2,0,0,0,0,1,0
+Dwarf,Hill Dwarf,M,25,Dwarvish,0,0,2,0,1,0,60
+Dwarf,Mountain Dwarf,M,25,Dwarvish,2,0,2,0,0,0,60
+Elf,Drow,M,30,Elvish,0,2,0,0,0,1,120
+Elf,High Elf,M,30,Elvish,0,2,0,1,0,0,60
+Elf,Wood Elf,M,35,Elvish,0,2,0,0,1,0,60
+Gnome,Forest Gnome,S,25,Gnomish,0,1,0,2,0,0,60
+Gnome,Rock Gnome,S,25,Gnomish,0,0,1,2,0,0,60
+Half-Elf,non,M,30,Elvish,0,0,0,0,0,2,60
+Half-Orc,non,M,30,Orcish,2,0,1,0,0,0,60
+Halfling,Lightfoot Halfling,S,25,Halfling,0,2,0,0,0,1,0
+Halfling,Stout Halfling,S,25,Halfling,0,2,1,0,0,0,0
+Human,non,M,30,non,1,1,1,1,1,1,0
+Human,Variant Human,M,30,non,0,0,0,0,0,0,0
+Tiefling,non,M,30,Infernal,0,0,0,1,0,2,60
