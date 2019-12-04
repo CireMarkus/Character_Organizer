@@ -8,6 +8,7 @@ class Charactersheet:
 
 	def __init__(self,name = 'default', experience = 0, strength = 0, dexterity = 0, 
 	 constitution = 0, intelligence = 0, wisdom = 0, charisma = 0):
+		#meta data
 		self.name = name
 		self.xp = experience
 		self.level = self.cal_level(self.xp)
@@ -20,6 +21,35 @@ class Charactersheet:
 		self.wisdom = wisdom 
 		self.charisma = charisma
 		self.profbonus = self.level.getbonus()
+
+	#getters for the class variables
+
+	#meta data getters
+	def getname(self):
+		return self.name
+	def getlevel(self):
+		return self.level.getlevel()
+	def getxp(self):
+		return self.xp
+
+	#cores data getters
+	def getstrength(self):
+		return self.strength
+	def getdexterity(self):
+		return self.dexterity
+	def getconstitution(self):
+		return self.constitution
+	def getintelligence(self):
+		return self.intelligence
+	def getwisdom(self):
+		return self.wisdom
+	def getcharisma(self):
+		return self.charisma
+	def getprofbon(self):
+		return self.profbonus
+	
+
+
 
 
 	#Calculates the Characters level based on the total experiece the player has
@@ -54,12 +84,6 @@ class Charactersheet:
 			elif xp >= levels[-1].getxp():
 				return levels[-1]
 
-	def getlevel(self):
-		return self.level.getlevel()
-
-	def getprofbon(self):
-		return self.profbonus
 
 
 
-character = Charactersheet()
