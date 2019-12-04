@@ -1,4 +1,5 @@
 import csv
+import os
 from levelClass import Level
 
 
@@ -23,7 +24,9 @@ class Charactersheet:
 
 	#Calculates the Characters level based on the total experiece the player has
 	def cal_level(self, xp):
-		level = open('..\\resources\\levels.csv','r')
+		levelspath = os.path.join('..','resources','levels.csv')
+		level = open(levelspath,'r')
+
 		level_reader = csv.reader(level,delimiter=',')
 
 		levels_holder = []
