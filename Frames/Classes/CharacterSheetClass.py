@@ -22,8 +22,6 @@ class Charactersheet:
 	#meta data getters
 	def getname(self):
 		return self.name
-	def getxp(self):
-		return self.xp
 
 	#cores data getters
 	def getstrength(self):
