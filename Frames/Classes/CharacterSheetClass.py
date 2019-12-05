@@ -1,17 +1,13 @@
 import csv
 import os
-from levelClass import Level
-
 
 class Charactersheet:
 
 
-	def __init__(self,name = 'default', experience = 0, strength = 0, dexterity = 0, 
+	def __init__(self,name = 'default', strength = 0, dexterity = 0, 
 	 constitution = 0, intelligence = 0, wisdom = 0, charisma = 0):
 		#meta data
 		self.name = name
-		self.xp = experience
-		self.level = self.cal_level(self.xp)
 
 		#cores 
 		self.strength = strength 
@@ -20,15 +16,12 @@ class Charactersheet:
 		self.intelligence = intelligence 
 		self.wisdom = wisdom 
 		self.charisma = charisma
-		self.profbonus = self.level.getbonus()
 
 	#getters for the class variables
 
 	#meta data getters
 	def getname(self):
 		return self.name
-	def getlevel(self):
-		return self.level.getlevel()
 	def getxp(self):
 		return self.xp
 
@@ -45,44 +38,7 @@ class Charactersheet:
 		return self.wisdom
 	def getcharisma(self):
 		return self.charisma
-	def getprofbon(self):
-		return self.profbonus
 	
-
-
-
-
-	#Calculates the Characters level based on the total experiece the player has
-	def cal_level(self, xp):
-		levelspath = os.path.join('..','resources','levels.csv')
-		level = open(levelspath,'r')
-
-		level_reader = csv.reader(level,delimiter=',')
-
-		levels_holder = []
-		linecount = 0 
-		for row in level_reader:
-			new = []
-			if linecount == 0:
-				linecount+=1
-			else:
-				for j in range(3):
-					new.append(row[j])
-				linecount+=1
-				levels_holder.append(new)
-		level.close()
-
-		levels = []
-		for i in levels_holder:
-			levels.append(Level(i[0],i[1],i[2]))
-
-
-		for i in range(len(levels)):
-			if levels[i].getlevel() != levels[-1].getlevel():
-				if xp >= levels[i].getxp() and xp <= levels[i+1].getxp():
-					return levels[i]
-			elif xp >= levels[-1].getxp():
-				return levels[-1]
 
 
 
