@@ -1,7 +1,7 @@
 from CharacterSheetClass import Charactersheet
 
 class Race(Charactersheet):
-	def __init__(self,race, subrace = 'none', size, speed, language,
+	def __init__(self,race, subrace, size, speed, language,
 		stren, dex, con, intel, wis, cha, dv):
 		super(self,Race).__init__(name = race,strength = stren, dexterity = dex, intelligence = intel, 
 			wisdom = wis, charisma = cha)
@@ -17,6 +17,7 @@ class Race(Charactersheet):
 			return self.subrace
 		else:
 			return ''
+			
 	def getsize(self):
 		return self.size
 	def getspeed(self):
