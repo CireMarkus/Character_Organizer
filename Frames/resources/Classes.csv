@@ -1,0 +1,13 @@
+Class  ;Hit Die ;Primary Ability;Saving Throws ;Armor Proficiencies;Weapon Proficiencies
+Barbarian;12;Strength;Strength,Constitution;Light,Medium,Shield;Simple,Martial
+Bard;8;Charisma;Dexterity,Charisma;Light;Simple,Hand Crossbow,Longsword,Rapiers,Shortsword
+Cleric;8;Wisdom;Wisdom,Charisma;Light,Medium,Shields;Simple 
+Druid;8;Wisdom ;Intelligence,Wisdom;Light,Medium,Shield,Nonmetal;Club,Dagger,Dart,Javelin,Mace,Quarterstaff,Scimitar,Sickles,Sling,Spear
+Fighter;10;Strength,Dexterity;Strength,Constitution;Light,Medium,Heavy,Shield;Simple,Martial
+Monk;8;Dexterity,Wisdom;Strength,Dexterity;None;Shortsword
+Paladin;10;Strength,Charisma;Wisdom,Charisma;Light,Medium,Heavy,Shield;Simple,Martial
+Ranger;10;Dexterity,Wisdom ;Strength,Dexterity;Light,Medium,Shield;Simple,Martial
+Rogue;8;Dexterity;Dexterity, Intelligence;Light ;Hand Crossbow,Longsword,Rapier,Shortsword
+Sorcerer;6;Charisma;Constitution,Charisma;None;Dagger,Dart,Slings,Quarterstaff,Light Crossbow
+Warlock;8;Charisma;Wisdom,Charisma;Light;Simple 
+Wizard;6;Intelligence;Intelligence,Wisdom;None;Dagger,Dart,Slings,Quarterstaff,Light Crossbow
