@@ -3,8 +3,6 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
-import os
-
 
 race_table = open('..\\Frames\\resources\\races.csv','a')
 
