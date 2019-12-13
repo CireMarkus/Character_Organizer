@@ -1,5 +1,3 @@
-import csv
-import os
 
 class Charactersheet:
 
@@ -36,6 +34,22 @@ class Charactersheet:
 		return self.wisdom
 	def getcharisma(self):
 		return self.charisma
+
+	#setters for the class variables
+	def setname(self,name):
+		self.name = name
+	def setstrength(self,strength):
+		self.strength = strength
+	def setdexterity(self,dexterity):
+		self.dexterity = dexterity
+	def setconstitution(self,constitution):
+		self.constitution = constitution
+	def setintelligence(self,intelligence):
+		self.intelligence = intelligence
+	def setwisdom(self,wisdom):
+		self.wisdom = wisdom
+	def setcharisma(self,charisma):
+		self.charisma = charisma
 	
 
 

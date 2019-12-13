@@ -14,9 +14,16 @@ class Nonmagical(Profession):
 		self.attack = attack 
 		self.damage = damage
 
+	#getters 
 	def getattack(self):
 		return self.attack
 	def getdamage(self):
 		return self.damage
+
+	#setters
+	def setattack(self,attack):
+		self.attack = attack
+	def setdamage(self,damage):
+		self.damage = damage
 
 		

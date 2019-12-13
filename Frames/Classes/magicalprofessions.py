@@ -27,3 +27,27 @@ class Magicalprofession(Profession):
 			return 0
 		else:
 			return slot
+
+	#getters
+	def getcantrips(self):
+		return self.cantrips
+	def getfirstlvlslots(self):
+		return self.firstlvlslots
+	def getsecondlvlslots(self):
+		return self.secondlvlslots
+	def getthirdlvlslots(self):
+		return self.thirdlvlslots
+	def getfourthlvlslots(self):
+		return self.fourthlvlslots
+	def getfifthlvlslots(self):
+		return self.fifthlvlslots
+	def getsixthlvlslots(self):
+		return self.sixthlvlslots
+	def getseventhlvlslots(self):
+		return self.seventhlvlslots
+	def geteighthlvlslots(self):
+		return self.eighthlvlslots
+	def getninthlvlslots(self):
+		return self.ninthlvlslots
+
+	

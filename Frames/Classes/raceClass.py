@@ -1,8 +1,8 @@
 from CharacterSheetClass import Charactersheet
 
 class Race(Charactersheet):
-	def __init__(self,race, subrace, size, speed, language,
-		stren, dex, con, intel, wis, cha, dv):
+	def __init__(self,race = None, subrace = None, size = None, speed = None, language = None,
+		strength = None, dexterity = None, constitution = None, intelligence = None, wisdom = None, charisma = None, dv = None):
 		super(self,Race).__init__(name = race,strength = stren, dexterity = dex, intelligence = intel, 
 			wisdom = wis, charisma = cha)
 		self.subrace = subrace
@@ -13,11 +13,11 @@ class Race(Charactersheet):
 	
 	#getters for the variables 
 	def getsubrace(self):
-		if self.subrace != 'none':
+		if self.subrace.lower() != 'none':
 			return self.subrace
 		else:
 			return ''
-			
+
 	def getsize(self):
 		return self.size
 	def getspeed(self):
@@ -26,12 +26,23 @@ class Race(Charactersheet):
 		return self.language
 	def getdarkvision(self):
 		return self.darkvision
+		
 
 	#setters for variables
+	def setrace(self,race):
+		self.name =race
+	def setsize(self,size):
+		self.size = size
 	def setspeed(self,speed):
 		self.speed = speed
 	def setdarkvison(self,darkvision):
 		self.darkvision = darkvision
+	def setlanguages(self,languages):
+		self.language = languages
+	
 	#manipulation functions
 	def addlanguages(self,language):
-		self.language.append(language)
+		if language.lower() != 'none':
+			self.language.append(language)
+		else:
+			self.language = 'You must chose your language(s)'

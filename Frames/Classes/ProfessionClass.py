@@ -9,14 +9,14 @@ class Profession():
 		#Tracks the hit die for the characers health 
 		self.hit_die = hit_die
 
-		self.primary_abilities.append(self.datasplitter(primary_abilities))
-		self.saving_throws.append(self.datasplitter(saving_throws))
+		self.primary_abilities = self.datasplitter(primary_abilities)
+		self.saving_throws = self.datasplitter(saving_throws)
 
 		#holds what armor proficencies the class has.
-		self.armor_prof.append(self.datasplitter(armor_prof))
-		self.weapon_prof.append(self.datasplitter(weapon_prof))
+		self.armor_prof = self.datasplitter(armor_prof)
+		self.weapon_prof = self.datasplitter(weapon_prof)
 
-		self.features.append((self.datasplitter(class_features)))
+		self.features = self.datasplitter(class_features)
 
 	#splits multidata into a list
 	def datasplitter(self,data):
@@ -24,3 +24,42 @@ class Profession():
 		return newdata.split(',')
 		
 	#getters 
+	def getname(self):
+		return self.name
+	def getlevel(self):
+		return self.level
+	def getprof_bonus(self):
+		return self.prof_bonus
+	def gethit_die(self):
+		return self.hit_die
+	def getprimary_abilities(self):
+		return self.primary_abilitites
+	def getsaving_throws(self):
+		return self.saving_throws
+	def getarmor_prof(self):
+		return self.armor_prof
+	def getweapon_prof(self):
+		return self.weapon_prof
+	def getfeatures(self):
+		return self.features
+
+	#setters
+	def setname(self,name):
+		self.name = name
+	def setlevel(self,level):
+		self.level = level
+	def setprof_bonus(self,bonus):
+		self.prof_bonus = bonus
+	def sethit_die(self,die):
+		self.hit_die = die
+	def setprimary_abilities(self,abilities):
+		self.primaryabilities = self.abilities
+
+	#adders
+	#adds ablilites or feauture to a class
+	def add_armor_prof(self,armor):
+		self.armor_prof.append(armor)
+	def add_weapon_prof(self,weapon):
+		self.weapon_prof.append(weapon)
+	def add_feature(self,feature):
+		self.features.append(feature)

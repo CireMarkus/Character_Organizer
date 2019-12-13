@@ -11,6 +11,6 @@ Half-Elf,none,M,30,Elvish,0,0,0,0,0,2,60
 Half-Orc,none,M,30,Orcish,2,0,1,0,0,0,60
 Halfling,Lightfoot Halfling,S,25,Halfling,0,2,0,0,0,1,0
 Halfling,Stout Halfling,S,25,Halfling,0,2,1,0,0,0,0
-Human,none,M,30,non,1,1,1,1,1,1,0
-Human,Variant Human,M,30,non,0,0,0,0,0,0,0
+Human,none,M,30,none,1,1,1,1,1,1,0
+Human,Variant Human,M,30,none,0,0,0,0,0,0,0
 Tiefling,none,M,30,Infernal,0,0,0,1,0,2,60
