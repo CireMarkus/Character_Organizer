@@ -1,5 +1,5 @@
 class Profession():
-	def __init__(self, name, hit_die, primary_abilities,saving_throws,
+	def __init__(self, name, hit_die, primary_abilities,saving_throws, proficent_skills
 	 armor_prof, weapon_prof, level, prof_bonus,class_features):
 		
 		#holds the name of the class the player can be
@@ -12,6 +12,7 @@ class Profession():
 		self.primary_abilities = self.datasplitter(primary_abilities)
 		self.saving_throws = self.datasplitter(saving_throws)
 
+		self.proficent_skills = proficent_skills
 		#holds what armor proficencies the class has.
 		self.armor_prof = self.datasplitter(armor_prof)
 		self.weapon_prof = self.datasplitter(weapon_prof)
