@@ -1,6 +1,8 @@
 import tkinter as Tk
 from tkinter import ttk
 import os
+import random  
+from datetime import datetime
 
 player_classes_path = os.path.join('Classes','resources')
 
@@ -44,20 +46,31 @@ class Stat_rolling_window(Tk.Frame):
 			stat_names.append(i)
 		stat_name_file.close()
 
-		print(stat_names)
 		corestats_frame = Tk.LabelFrame(self)
 		corestats_frame['text'] = 'Core Stats'
 		corestats_frame.grid(row = 0, column = 0, columnspan = 7)
 
-		stat_boxes_menus = []
+		stat_boxes_labels = []
 		stat_Boxes = []
+
+		def roll():
+			for i in stat_Boxes:
+				i.delete(0, Tk.END)
+				i.insert(0,random.randint(3,18))
+
 		#creates the stat boxes that will hold the players rolls 
 		for i in range (6):
-			stat_Boxes.append(Tk.Entry(corestats_frame))
-			stat_boxes_menus.append(ttk.Combobox(corestats_frame, values = stat_names))
+			stat_Boxes.append(Tk.Entry(corestats_frame,width = 3)) #creation of boxes that hold the stat rolls.
+			stat_boxes_labels.append(ttk.Label(corestats_frame, text = stat_names[i]))#creation of the drop down menues that hold the stat values.
 
-			stat_boxes_menus[i].grid(row = i, column = 0)
+			stat_boxes_labels[i].grid(row = i, column = 0) #dropdown menues that hold the stat names.
 			stat_Boxes[i].grid(row = i, column = 1)
+	
+		roll_button = Tk.Button(corestats_frame, text = 'Roll', command = roll)
+		roll_button.grid(row = 7, column =1)
+
+
+
 
 
 class Race(Tk.Frame):
